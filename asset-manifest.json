@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/dvpavan-kumar/countries-dashboard/static/css/main.f855e6bc.css",
+    "main.js": "/dvpavan-kumar/countries-dashboard/static/js/main.db53ecd3.js",
+    "index.html": "/dvpavan-kumar/countries-dashboard/index.html",
+    "main.f855e6bc.css.map": "/dvpavan-kumar/countries-dashboard/static/css/main.f855e6bc.css.map",
+    "main.db53ecd3.js.map": "/dvpavan-kumar/countries-dashboard/static/js/main.db53ecd3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.db53ecd3.js"
+  ]
+}
