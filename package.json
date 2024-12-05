@@ -1,6 +1,6 @@
 {
+  "homepage": "https://dvpavan-kumar.github.io/countries-dashboard",
   "name": "countires-dashboard",
-  "homepage": "https://github.com/dvpavan-kumar/countries-dashboard",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
