@@ -1,24 +1,20 @@
-import React, { useState } from 'react';
-import CountrySelector from './Components/CountrySelector';
-import CountryDetails from './Components/CountryDetails';
-import { useFetchData } from './hooks/useFetchData';
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { CountryProvider } from "./context/CountryContext";
+import Countries from "./Components/CountriesTable";
+import States from "./Components/StatesTable";
 
-const Home = () => {
-  const [selectedCountry, setSelectedCountry] = useState<string | null>(null);
-  const { data: countries, loading } = useFetchData('https://countriesnow.space/api/v0.1/countries');
-
-  const handleCountrySelect = (country: string) => {
-    setSelectedCountry(country);
-  };
-
-  if (loading) return <div className="text-center text-xl">Loading countries...</div>;
-console.log('selectedCountry', selectedCountry)
+const App: React.FC = () => {
   return (
-    <div className="max-w-7xl mx-auto p-4">
-      <CountrySelector countries={countries} onSelect={handleCountrySelect} />
-      {selectedCountry && <CountryDetails country={selectedCountry} />}
-    </div>
+    <CountryProvider>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Countries />} />
+          <Route path="/:countryName" element={<States />} />
+        </Routes>
+      </Router>
+    </CountryProvider>
   );
 };
 
-export default Home;
+export default App;
